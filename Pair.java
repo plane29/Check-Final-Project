@@ -1,29 +1,29 @@
-class Pair{ //taken from keyboard spheres
-    public int x; 
-    public int y; 
+class Pair{ //taken from keyboard spheres but converts everything to ints
+    public int x; //x value
+    public int y; //y value
     
-    public Pair(int initX, int initY){  
-	x = initX;  
-	y = initY;  
+    public Pair(int initX, int initY){    //creates a pair by having an x and a y value
+	   x = initX;  
+	   y = initY;  
     }
 
-    public Pair add(Pair toAdd){ 
-	return new Pair(x + toAdd.x, y + toAdd.y);
+    public Pair add(Pair toAdd){   //adds two pairs together
+	   return new Pair(x + toAdd.x, y + toAdd.y);
     }
 
-    public Pair divide(int denom){  
-	return new Pair((int)(x / denom), (int)(y / denom));
+    public Pair divide(int denom){   //scalar multiplication of some inverse of an element in Z
+	   return new Pair((int)(x / denom), (int)(y / denom));
     }
 
-    public Pair times(int val){  
-	return new Pair(x * val, y * val);
+    public Pair times(int val){  //scalar multiplication
+	   return new Pair(x * val, y * val);
     }
 
-    public void flipX(){  
-	x = -x;
+    public void flipX(){  //makes x value have opposite parity  
+	   x = -x;
     }
     
-    public void flipY(){  
-	y = -y;
+    public void flipY(){  //makes y value have opposite parity
+	   y = -y;
     }
 }
