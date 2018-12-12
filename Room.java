@@ -82,7 +82,7 @@ public class Room{  //main inspiration came from world in pong/keyboard spheres 
         areas[8].puzzle = supArea[0];
         areas[7].puzzle = supArea[0];
         supArea[1] = new Puzzle(g, "PianoPuzzle.jpg",13, "Keyboard.png");
-        supArea[1].myHint = new Hint(width, height, "Type in or click the sequence. That notebook could help you.");
+        supArea[1].myHint = new Hint(width, height, "Type in or click the sequence. That notebook could help you.", "The notebook between the chairs.", "Type or click in the right order.");
         areas[3].puzzle = supArea[1];
 
         //here we create the hitboxes for the keyboard puzzle which are used in the main method to tell if the user has entered the correct sequence
@@ -98,16 +98,16 @@ public class Room{  //main inspiration came from world in pong/keyboard spheres 
         //more brute forcing of puzzles
         areas[4].puzzle = supArea[1];
         supArea[2] = new Puzzle(g, "LightbulbOff.jpg", 14, "LightbulbOn.jpg");
-        supArea[2].myHint = new Hint(width, height, "Somehow that computer over there turns on this light.");
+        supArea[2].myHint = new Hint(width, height, "Somehow that computer over there turns on this light.", "Go check out that computer.", "Go over and check out that computer.");
         areas[9].puzzle = supArea[2];
         supArea[2].setBottomRect();
         supArea[3] = new Puzzle(g, "RiddleQuestion.jpg",15, "RiddleCode.jpg");
-        supArea[3].myHint = new Hint(width, height, "Wax on wax off. Type your answer.");
+        supArea[3].myHint = new Hint(width, height, "Wax on wax off. Type your answer.", "Wicked cool.", "Type your answer.");
         areas[5].puzzle = supArea[3];
         supArea[3].setBottomRect();
         currentArea = areas[0];
         supArea[4] = new Puzzle(g, "ChessUnsolved.jpg",16, "ChessSolved.jpg");
-        supArea[4].myHint = new Hint(width, height, "Drags a pawn.  Checkmate... En Passant.");
+        supArea[4].myHint = new Hint(width, height, "Drags a pawn.  Checkmate... En Passant.",  "Dark just moved a pawn. Try dragging.", "Don't forget about En passant");
         supArea[0].puzzle = supArea[4];
         supArea[0].createHitBox((int)(395*(initWidth/960.0)),(int)(360*(initHeight/640.0)),(int)(150*(initWidth/960.0)), (int)(100* (initHeight/640.0)));
         supArea[0].setBottomRect();

@@ -33,7 +33,7 @@ class Node{
 }
 
 
-  	public boolean checkTrojan(){
+  	public boolean checkPiano(){
 	String toReturn = "";
 	Node n = end;
 	int nodepos = 0;
@@ -75,7 +75,7 @@ class Node{
 	Node toAdd = new Node(toAppend);
 	toAdd.next = end;
 	end = toAdd;
-	if(this.checkTrojan()){
+	if(this.checkPiano()){
 		System.out.println("You solved it!");
 	}
 	else{

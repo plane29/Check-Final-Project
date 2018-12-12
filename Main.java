@@ -210,6 +210,7 @@ public class Main extends JPanel implements KeyListener, MouseListener{
                     r.previousArea = r.currentArea; //change the previous area to the current area because we are moving
                 }
                 r.currentArea =r.currentArea.puzzle; //change to the puzzle
+                r.currentArea.myHint.differentHint();
                 if(r.currentArea.num == 14 && r.currentArea.getSolved()){ //if the user goes to this puzzle after it is unlocked give user the lock
                     Area.myInventory.lockSolved = true;
                 }
@@ -317,6 +318,10 @@ public class Main extends JPanel implements KeyListener, MouseListener{
     }
 
     public static void main(String[] args) {  //main idea taken from keyboard spheres/draw to screen
+        System.out.println("Many thanks to the Mead Art Museum for letting us use these pictures.");
+        System.out.println("Rotherwas Room(17th Century)");  //attribution of images
+        System.out.println("Mead Art Museum.");
+        System.out.println("AC 1945.494");
         play = new Main();  //create a new instance of main
         JFrame frame = new JFrame("Escape Room");  //make a new instance of JFrame 
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 
